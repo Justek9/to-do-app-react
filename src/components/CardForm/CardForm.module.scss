@@ -1,6 +1,6 @@
 @import '../../styles/settings.scss';
 
-.columnForm {
+.cardForm {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -12,14 +12,11 @@
 	}
 }
 
-@media (max-width: 768px) {
-	.columnForm {
+@media (max-width: 992px) {
+	.cardForm {
 		flex-direction: column;
 		button {
 			margin-top: 1rem;
-		}
-		input {
-			margin-bottom: 1rem;
 		}
 	}
 }
