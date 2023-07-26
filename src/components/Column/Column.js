@@ -5,7 +5,12 @@ import CardForm from '../CardForm/CardForm'
 import styles from './Column.module.scss'
 
 const Column = props => {
-	const cards = useSelector(state => state.cards.filter(card => card.columnId === props.id))
+	const phrase = useSelector(state => state.filterPhrase)
+
+	const cards = useSelector(state =>
+		state.cards.filter(card => card.columnId === props.id && card.title.toLowerCase().includes(phrase.toLowerCase()))
+	)
+
 	return (
 		<article className={styles.column}>
 			<h2 className={styles.title}>
