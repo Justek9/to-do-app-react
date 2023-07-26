@@ -19,7 +19,7 @@ const List = () => {
 					<Column key={column.id} {...column} />
 				))}
 			</section>
-			{/* <ColumnForm action={addColumn} /> */}
+			<ColumnForm />
 		</div>
 	)
 }
