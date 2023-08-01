@@ -1,23 +1,43 @@
 @import './settings.scss';
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: $color-dark;
-  font-family: $font-text;
-  font-size: ($base-size * 1.1);
-  color: $color-light;
-  letter-spacing: 0.5px;
+	margin: 0;
+	padding: 0;
+	background: $color-dark;
+	font-family: $font-text;
+	font-size: ($base-size * 1.1);
+	color: $color-light;
+	letter-spacing: 0.5px;
 }
 
 :global(.container) {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
+	width: 90%;
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
-@import "./typography.scss";
+:global(.hero) {
+	padding: $base-size;
+}
+
+:global(.title) {
+	text-align: center;
+	font-size: ($base-size * 3);
+	text-transform: uppercase;
+}
+
+:global(.subtitle) {
+	padding: ($base-size * 2) 0;
+	text-align: center;
+	font-size: ($base-size * 2);
+	font-style: italic;
+	font-weight: normal;
+}
+
+@import './typography.scss';

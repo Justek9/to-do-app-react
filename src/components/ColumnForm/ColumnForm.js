@@ -13,7 +13,6 @@ const ColumnForm = () => {
 
 	const handleSubmit = e => {
 		e.preventDefault()
-		// dispatch(addColumn({ title, icon }))
 		dispatch(addColumn({ newColumn: { title, icon } }))
 		setTitle('')
 		setIcon('')
