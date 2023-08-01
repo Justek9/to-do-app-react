@@ -23,6 +23,7 @@ export const getAllLists = ({ lists }) => {
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload })
 export const addCard = payload => ({ type: 'ADD_CARD', payload })
 export const search = payload => ({ type: 'SEARCH', payload })
+export const addList = payload => ({ type: 'ADD_LIST', payload })
 
 const reducer = (state, action) => {
 	switch (action.type) {
@@ -32,6 +33,8 @@ const reducer = (state, action) => {
 			return { ...state, cards: [...state.cards, { ...action.payload.newCard, id: shortid() }] }
 		case 'SEARCH':
 			return { ...state, filterPhrase: action.payload }
+		case 'ADD_LIST':
+			return { ...state, lists: [...state.lists, { ...action.payload.newList, id: shortid() }] }
 		default:
 			return state
 	}

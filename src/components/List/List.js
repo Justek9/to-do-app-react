@@ -12,8 +12,7 @@ const List = () => {
 	const columns = useSelector(state => getColumnsByList(state, listId))
 	const listData = useSelector(state => getListById(state, listId))
 
-	if (!listData) return <Navigate to='/' />
-
+	if (!listData.length) return <Navigate to='/' />
 	return (
 		<div className={styles.list}>
 			<header className={styles.header}>
