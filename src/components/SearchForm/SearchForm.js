@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import TextInput from '../TextInput/TextInput'
 import Button from '../Button/Button'
@@ -9,8 +9,12 @@ const SearchForm = () => {
 	const [phrase, setPhrase] = useState('')
 	const dispatch = useDispatch()
 
+	useEffect(() => {
+		handleSearch()
+	}, [])
+
 	const handleSearch = e => {
-		e.preventDefault()
+		e?.preventDefault()
 		dispatch(search(phrase))
 		setPhrase('')
 	}

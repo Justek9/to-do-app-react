@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useParams } from 'react-router'
 import Button from '../Button/Button'
 import TextInput from '../TextInput/TextInput'
 import { addColumn } from '../../redux/store'
@@ -7,13 +8,14 @@ import styles from './ColumnForm.module.scss'
 
 const ColumnForm = () => {
 	const dispatch = useDispatch()
+	const { listId } = useParams()
 
 	const [title, setTitle] = useState('')
 	const [icon, setIcon] = useState('')
 
 	const handleSubmit = e => {
 		e.preventDefault()
-		dispatch(addColumn({ newColumn: { title, icon } }))
+		dispatch(addColumn({ newColumn: { title, icon, listId: listId } }))
 		setTitle('')
 		setIcon('')
 	}

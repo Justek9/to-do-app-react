@@ -11,6 +11,14 @@ export const getAllColumns = ({ columns }) => {
 	return columns
 }
 
+export const getListById = ({ lists }, id) => lists.filter(list => list.id === id)
+
+export const getColumnsByList = ({ columns }, listId) => columns.filter(column => column.listId === listId)
+
+export const getAllLists = ({ lists }) => {
+	return lists
+}
+
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload })
 export const addCard = payload => ({ type: 'ADD_CARD', payload })

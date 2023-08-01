@@ -7,6 +7,7 @@ import styles from './Column.module.scss'
 const Column = props => {
 	const cards = useSelector(state => getFilteredCards(state, props.id))
 
+
 	return (
 		<article className={styles.column}>
 			<h2 className={styles.title}>
