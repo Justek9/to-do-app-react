@@ -26,12 +26,6 @@ body {
 	padding: $base-size;
 }
 
-:global(.title) {
-	text-align: center;
-	font-size: ($base-size * 3);
-	text-transform: uppercase;
-}
-
 :global(.subtitle) {
 	padding: ($base-size * 2) 0;
 	text-align: center;

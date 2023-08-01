@@ -1,7 +1,9 @@
+import PageTitle from '../PageTitle/PageTitle'
+
 const Favourite = () => {
 	return (
 		<div className='hero'>
-			<h1 className='title'>Favourite</h1>
+			<PageTitle>Favourite</PageTitle>
 			<p className='subtitle'>Lorem ipsum</p>
 		</div>
 	)

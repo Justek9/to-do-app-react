@@ -1,7 +1,9 @@
+import PageTitle from '../PageTitle/PageTitle'
+
 const About = () => {
 	return (
 		<div className='hero'>
-			<h1 className='title'>About</h1>
+			<PageTitle>About</PageTitle>
 			<p className='subtitle'>Lorem ipsum</p>
 		</div>
 	)
