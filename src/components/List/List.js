@@ -1,4 +1,5 @@
-import { getColumnsByList, getListById } from '../../redux/store'
+import { getColumnsByList } from '../../redux/columnsReducer'
+import { getListById } from '../../redux/listsReducer'
 import { useParams } from 'react-router'
 import { useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'

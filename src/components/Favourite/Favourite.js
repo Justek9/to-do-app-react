@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { getFavoriteCards } from '../../redux/store'
+import { getFavoriteCards } from '../../redux/cardReducer'
 import { Navigate } from 'react-router-dom'
 import PageTitle from '../PageTitle/PageTitle'
 import Card from '../Card/Card'

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { toggleCardFavorite } from '../../redux/store'
+import { toggleCardFavorite } from '../../redux/cardReducer'
 import clsx from 'clsx'
 import styles from './Card.module.scss'
 

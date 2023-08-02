@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import TextInput from '../TextInput/TextInput'
 import Button from '../Button/Button'
-import { addCard } from '../../redux/store'
+import { addCard } from '../../redux/cardReducer'
 import styles from './CardForm.module.scss'
 
 const CardForm = ({ columnId }) => {

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import TextInput from '../TextInput/TextInput'
 import Button from '../Button/Button'
 import styles from './SearchForm.module.scss'
-import { search } from '../../redux/store'
+import { search } from '../../redux/searchStringReducer'
 
 const SearchForm = () => {
 	const [phrase, setPhrase] = useState('')
